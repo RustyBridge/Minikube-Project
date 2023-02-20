@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mybackend
+  labels:
+    app: mybackend
+spec:
+  template:
+    metadata:
+      name: mybackend
+      labels:
+        app: mybackend
+    spec:
+      containers:
+      - name: mybackend
+        image: docker.io/rustybridge/resume-backend
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+          name: listen
+  selector:
+    matchLabels:
+      app: mybackend
+  replicas: 2
+
+

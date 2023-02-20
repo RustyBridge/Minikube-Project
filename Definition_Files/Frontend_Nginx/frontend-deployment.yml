@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfrontend
+  labels:
+    app: myfrontend
+spec:
+  template:
+    metadata:
+      name: myfrontend
+      labels:
+        app: myfrontend
+    spec:
+      containers:
+      - name: myfrontend
+        image: docker.io/rustybridge/resume-frontend
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+          name: listen
+  selector:
+    matchLabels:
+      app: myfrontend
+  replicas: 2
