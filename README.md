@@ -1,6 +1,6 @@
 ## **Minikube Project**
 
-A project where I aimed to deploy a web application (frontend - backend/API - DB) in Minikube to gain applied knowledge and experiment with stateful workloads in K8s.
+A project where I aimed to deploy an application (frontend - backend/API - DB) in Minikube to gain applied knowledge and experiment with stateful workloads in K8s.
 
 ### **Architecture diagram:**
 
