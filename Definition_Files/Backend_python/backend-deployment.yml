@@ -11,9 +11,10 @@ spec:
       labels:
         app: mybackend
     spec:
+      setHostnameAsFQDN: true
       containers:
       - name: mybackend
-        image: docker.io/rustybridge/resume-backend
+        image: docker.io/rustybridge/mybackend
         imagePullPolicy: Never
         ports:
         - containerPort: 5000

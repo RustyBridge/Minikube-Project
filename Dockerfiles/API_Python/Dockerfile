@@ -1,13 +1,16 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install --no-install-recommends -y python3.8 python3.8-dev python3.8-venv python3-pip python3-wheel build-essential
-RUN python3.8 --version
+RUN apt-get -y update
+RUN apt-get install -y python3.8 python3.8-dev python3.8-venv python3-pip python3-wheel build-essential
 
 WORKDIR /app
 
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt --src /usr/local/src
+
 COPY . .
-RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["python3.8", "/app/api.py"]
+CMD ["python3.8", "api.py"]

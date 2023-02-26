@@ -11,9 +11,10 @@ spec:
       labels:
         app: myfrontend
     spec:
+      setHostnameAsFQDN: true
       containers:
       - name: myfrontend
-        image: docker.io/rustybridge/resume-frontend
+        image: docker.io/rustybridge/myfrontend
         imagePullPolicy: Never
         ports:
         - containerPort: 80
