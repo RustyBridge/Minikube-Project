@@ -6,7 +6,7 @@ metadata:
     app: my-db
 spec:
   serviceName: my-db-svc
-  replicas: 2
+  replicas: 3
   podManagementPolicy: OrderedReady
   updateStrategy: 
     type: RollingUpdate
@@ -38,7 +38,6 @@ spec:
               - -c
               - nodetool drain
         env:
-
           - name: CASSANDRA_CLUSTER_NAME
             value: "cluster1"
           - name: CASSANDRA_DC
@@ -47,7 +46,6 @@ spec:
             value: "rack1"
           - name: CASSANDRA_SEEDS
             value: "my-db-0.my-db-svc.default.svc.cluster.local"
-
         volumeMounts:
         - name: my-db-pvc
           mountPath: /var/lib/cassandra

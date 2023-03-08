@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_restful import Resource, Api
 from cassandra.cluster import Cluster
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"*": {"origins": "http://webapp.test"}})
 api = Api(app)
 
 class read(Resource):
