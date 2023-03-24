@@ -4,7 +4,7 @@ A project where I aimed to deploy an application (frontend - backend/API - DB) i
 
 ### **Architecture diagram:**
 
-![Kubernetes Project](https://user-images.githubusercontent.com/68524920/221432492-43b548e4-64dc-405d-9af5-732b7a598f69.png)
+![Kubernetes Project](https://user-images.githubusercontent.com/68524920/227621219-67d371ae-2397-4d05-98dd-6f392eeff3c5.png)
 
 
 ### **Description:**
